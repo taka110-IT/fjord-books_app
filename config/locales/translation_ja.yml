@@ -20,12 +20,17 @@ ja:
   confirm:
     delete: 削除しますか？
 
-  page:
-    books: 本リスト
-    new_book: 新規作成
-    editing_book: 本を編集
+  books:
+    index:
+      title: 本リスト
+    new:
+      title: 新規作成
+    edit:
+      title: 本を編集
 
-  notice:
-    created: 作成しました。
-    updated: 更新しました。
-    destroyed: 削除しました。
+    create:
+      success: 作成しました。
+    update:
+      success: 更新しました。
+    destroy:
+      success: 削除しました。
