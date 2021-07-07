@@ -149,7 +149,7 @@ ja:
     application:
       title: 本アプリ
       logged_in_as: でログインしています。
-      edit_profile: プロフィール編集
+      edit_profile: ユーザー編集
       logout: ログアウト
       user_list: ユーザーリスト
       sign_up: サインアップ
