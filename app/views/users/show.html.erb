@@ -1,23 +1,23 @@
 <p>
   <strong><%= User.human_attribute_name(:email) %></strong><br />
-  <%= @users.email %>
+  <%= @user.email %>
 </p>
 
 <p>
   <strong><%= User.human_attribute_name(:postal_code) %></strong><br />
-  <%= @users.postal_code %>
+  <%= @user.postal_code %>
 </p>
 
 <p>
   <strong><%= User.human_attribute_name(:address) %></strong><br />
-  <%= @users.address %>
+  <%= @user.address %>
 </p>
 
 <p>
   <strong><%= User.human_attribute_name(:self_description) %></strong><br />
-  <%= @users.self_description %>
+  <%= @user.self_description %>
 </p>
 
 <br />
 
-<%= link_to t('devise.shared.links.back'), users_index_path %>
+<%= link_to t('devise.shared.links.back'), users_path %>
