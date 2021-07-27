@@ -1,5 +1,22 @@
 <h1><%= t('views.common.title_show', name: User.model_name.human) %></h1>
 
+<% if current_user != @user %>
+  <% if @user.followed_by?(current_user) %>
+    <p><%= link_to 'フォロー解除', user_relationships_path(@user.id), method: :delete %></p>
+  <% else %>
+    <p><%= link_to 'フォローする', user_relationships_path(@user.id), method: :post %></p>
+  <% end %>
+<% end %>
+
+<p>
+  <%= link_to "#{@user.followings.count}フォロー", followings_user_path(@user.id) %>
+</p>
+
+<p>
+  <%= link_to "#{@user.followers.count}フォロワー", followers_user_path(@user.id) %>
+</p>
+<br />
+
 <p>
   <strong><%= User.human_attribute_name(:email) %>:</strong>
   <%= @user.email %>
