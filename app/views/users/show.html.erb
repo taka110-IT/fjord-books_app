@@ -2,18 +2,18 @@
 
 <% if current_user != @user %>
   <% if @user.followed_by?(current_user) %>
-    <p><%= link_to 'フォロー解除', user_relationships_path(@user.id), method: :delete %></p>
+    <p><%= link_to t('views.follow.cancelled'), user_relationships_path(@user.id), method: :delete %></p>
   <% else %>
-    <p><%= link_to 'フォローする', user_relationships_path(@user.id), method: :post %></p>
+    <p><%= link_to t('views.follow.followed'), user_relationships_path(@user.id), method: :post %></p>
   <% end %>
 <% end %>
 
 <p>
-  <%= link_to "#{@user.followings.count}フォロー", followings_user_path(@user.id) %>
+  <%= link_to t('views.follow.following_count', count: @user.followings.count), followings_user_path(@user.id) %>
 </p>
 
 <p>
-  <%= link_to "#{@user.followers.count}フォロワー", followers_user_path(@user.id) %>
+  <%= link_to t('views.follow.follower_count', count: @user.followers.count), followers_user_path(@user.id) %>
 </p>
 <br />
 
