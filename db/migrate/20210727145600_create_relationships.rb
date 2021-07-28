@@ -10,6 +10,6 @@ class CreateRelationships < ActiveRecord::Migration[6.1]
     end
     add_index :relationships, :following_id
     add_index :relationships, :follower_id
-    add_index :relationships, [:following_id, :follower_id], unique: true
+    add_index :relationships, %i[following_id follower_id], unique: true
   end
 end
