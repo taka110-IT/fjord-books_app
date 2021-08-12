@@ -1,0 +1,12 @@
+<hr>
+<h3>コメント</h3>
+<% if commentable.comments.present? %>
+  <% commentable.comments.each do |comment| %>
+    <p>投稿者:<%= comment.user.name %></p>
+    <p>投稿日:<%= comment.created_at %></p>
+    <p>コメント:<%= comment.body %></p>
+    <hr>
+  <% end %>
+<% else %>
+  <p>コメントはまだありません。</p>
+<% end %>
