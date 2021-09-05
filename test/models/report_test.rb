@@ -15,7 +15,7 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test 'created_on check' do
-    today = Date.today
+    today = Time.zone.today
     assert_equal today, @report1.created_on
   end
 end
