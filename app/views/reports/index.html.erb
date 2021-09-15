@@ -18,7 +18,7 @@
         <td><%= l report.created_on %></td>
         <td><%= link_to t('views.common.show'), report %></td>
         <% editable = report.editable?(current_user) %>
-        <td><%= link_to(t('views.common.edit'), edit_report_path(report)) if editable %></td>
+        <td id="edit"><%= link_to(t('views.common.edit'), edit_report_path(report)) if editable %></td>
         <td><%= link_to(t('views.common.destroy'), report, method: :delete, data: { confirm: t('views.common.delete_confirm') }) if editable %></td>
       </tr>
     <% end %>
